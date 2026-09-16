@@ -8,9 +8,9 @@ import subprocess
 from datetime import datetime
 
 # 100% VERIFIED CREDENTIALS
-TOKEN = "8914023276:AAEEK2saI-zrrtkGlo-I8fojDtVvkKwcSoA"
-TWILIO_SID = "AC7f4413f1b3c8d41291918c54dbdba8ff"
-TWILIO_TOKEN = "c302c62799c17974ddda70f0b96a32b4"
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8914023276:AAEEK2saI-zrrtkGlo-I8fojDtVvkKwcSoA")
+TWILIO_SID = os.getenv("TWILIO_SID", "AC7f4413f1b3c8d41291918c54dbdba8ff")
+TWILIO_TOKEN = os.getenv("TWILIO_TOKEN", "c302c62799c17974ddda70f0b96a32b4")
 TWILIO_WHATSAPP_FROM = "+14155238886"
 
 # 3 User WhatsApp Numbers

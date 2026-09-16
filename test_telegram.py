@@ -1,7 +1,7 @@
-﻿import urllib.request
+﻿Get-ChildItem -Path "$env:USERPROFILE\.gemini" -Recurse -Filter "*.json" | Select-String "datacloud_telemetry"import urllib.request
 import json
 
-TOKEN = "8914023276:AAEEK2saI-zrrtkGlo-I8fojDtVvkKwcSoA"
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8914023276:AAEEK2saI-zrrtkGlo-I8fojDtVvkKwcSoA")
 
 def send_alert():
     url = f"https://api.telegram.org/bot{TOKEN}/getUpdates"
